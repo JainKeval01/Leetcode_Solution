@@ -3,11 +3,9 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) {
         int first = -1;
         int last = -1;
-
         int left = 0;
         int right = nums.size() - 1;
 
-        // Find first occurrence
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
@@ -26,7 +24,6 @@ public:
         left = 0;
         right = nums.size() - 1;
 
-        // Find last occurrence
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
