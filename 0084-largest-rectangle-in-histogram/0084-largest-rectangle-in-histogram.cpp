@@ -6,7 +6,6 @@ public:
         vector<int> left(n), right(n);
         stack<int> st;
 
-        // Previous smaller element
         for (int i = 0; i < n; i++) {
             while (!st.empty() &&
                    heights[st.top()] >= heights[i]) {
@@ -18,8 +17,7 @@ public:
         }
 
         while (!st.empty()) st.pop();
-
-        // Next smaller element
+        
         for (int i = n - 1; i >= 0; i--) {
             while (!st.empty() &&
                    heights[st.top()] >= heights[i]) {
